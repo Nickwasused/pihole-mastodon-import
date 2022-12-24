@@ -83,7 +83,7 @@ def get_remote_urls():
         "include_down": "false",
         "include_closed": "true",
         "min_users": "2",
-        "min_version": "3.5.5"
+        "min_version": "3.0.0"
     }
 
     while fetching:
