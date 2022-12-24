@@ -33,6 +33,8 @@ def whitelist_urls(add_urls):
     w_connection.close()
 
     for urls in np.array_split(add_urls, 100):
+        if len(urls) == 0:
+            continue
         command = 'pihole -w -nr -q '
         for url in urls:
             command += f"{url} "
