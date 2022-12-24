@@ -81,7 +81,9 @@ def get_remote_urls():
         "count": "1000",
         "include_dead": "false",
         "include_down": "false",
-        "include_closed": "true"
+        "include_closed": "true",
+        "min_users": "2",
+        "min_version": "3.5.5"
     }
 
     while fetching:
