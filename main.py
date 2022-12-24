@@ -21,6 +21,8 @@ connection.close()
 
 def whitelist_urls(add_urls):
     logging.info(f"adding {len(add_urls)} to whitelist")
+    if len(add_urls) == 0:
+        return
     w_connection = sqlite3.connect(database_file)
     w_cursor = w_connection.cursor()
     w_cursor.execute("BEGIN")
@@ -43,6 +45,8 @@ def whitelist_urls(add_urls):
 
 def remove_urls_whitelist(remove_urls):
     logging.info(f"removing {len(remove_urls)} from whitelist")
+    if len(remove_urls) == 0:
+        return
     r_connection = sqlite3.connect(database_file)
     r_cursor = r_connection.cursor()
     r_cursor.execute("BEGIN")
